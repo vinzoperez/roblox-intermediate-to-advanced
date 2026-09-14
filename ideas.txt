@@ -1,0 +1,11 @@
+General Idea: Your Battlegrounds
+Description: Allow players to control their own abilities and ult abilities through
+a point system that maximizes their ability weight kinda like gta starting out
+Save those abilities to the player table and let players get 1 character slot for free to save that data do
+
+
+Monetization:
+Clans
+Early access abilities
+Extra Character Slots
+Auras / VFX

@@ -4,7 +4,6 @@ local module = {}
 module.__index = module
 
 export type AnimalData = {
-    Type: "cat" | "dog",
     Name: string ,
     Age: number,
     Noise: string
@@ -17,14 +16,13 @@ export type Animal = AnimalData & {
 }
 
 
-function module.CreateAnimal(animalType: "Cat" | "Dog" ,name: string, age: number, noise: string): Animal
-    if not name then return end
-    if not age then return end
+function module.CreateAnimal(data: AnimalData): Animal
+    if not data.Name then return end
+    if not data.Age then return end
     local self = setmetatable({
-        Type = string.lower(animalType) :: "cat" | "dog",
-        Name = name,
-        Age = age,
-        Noise = noise,
+        Name = data.Name,
+        Age = data.Age,
+        Noise = data.Noise,
     }, module)
     return self
 end
